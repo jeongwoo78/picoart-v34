@@ -2,6 +2,10 @@
 // v33: 르네상스만 카테고리 기반, 나머지는 v32 유지
 // JSON 파일 방식으로 확장 가능
 
+// Node.js 파일 시스템 import
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
 // PicoArt v32 - Art Movements 10 (Practical Selection)
 // v32: 미술사조 10개 (교육적 완성도 + 시각적 차별성 + 실용성)
 //
@@ -39,7 +43,7 @@ let artworksCache = {};
 let categoryRulesCache = null;
 
 /**
- * JSON 파일에서 작품 데이터 로드
+ * JSON 파일에서 작품 데이터 로드 (파일 시스템)
  */
 async function loadArtworks(movement) {
   if (artworksCache[movement]) {
@@ -47,16 +51,11 @@ async function loadArtworks(movement) {
   }
   
   try {
-    const baseUrl = process.env.VERCEL_URL 
-      ? `https://${process.env.VERCEL_URL}`
-      : 'http://localhost:3000';
+    // Vercel 서버리스 환경에서 파일 시스템으로 직접 읽기
+    const jsonPath = join(process.cwd(), 'public', 'data', `${movement}.json`);
+    const jsonContent = readFileSync(jsonPath, 'utf-8');
+    const data = JSON.parse(jsonContent);
     
-    const response = await fetch(`${baseUrl}/data/${movement}.json`);
-    if (!response.ok) {
-      throw new Error(`Failed to load ${movement}.json: ${response.status}`);
-    }
-    
-    const data = await response.json();
     artworksCache[movement] = data.artworks;
     console.log(`✅ Loaded ${data.artworks.length} artworks for ${movement}`);
     return data.artworks;
