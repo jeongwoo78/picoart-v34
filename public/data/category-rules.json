@@ -1,0 +1,213 @@
+{
+  "version": "1.0",
+  "description": "Photo category determination rules based on AI analysis keywords",
+  
+  "rules": [
+    {
+      "priority": 1,
+      "type": "portrait-group",
+      "keywords": ["group", "multiple people", "several people", "people"],
+      "subcategories": [
+        {
+          "keywords": ["many", "crowd", "large group", "7", "8", "9", "10"],
+          "result": { "primary": "portrait", "sub": "portrait-group-7plus" }
+        },
+        {
+          "keywords": ["several", "medium group", "4", "5", "6"],
+          "result": { "primary": "portrait", "sub": "portrait-group-4-6" }
+        },
+        {
+          "keywords": ["2", "3", "couple", "two", "three"],
+          "result": { "primary": "portrait", "sub": "portrait-small-group" }
+        }
+      ],
+      "default": { "primary": "portrait", "sub": "portrait-small-group" }
+    },
+    
+    {
+      "priority": 2,
+      "type": "portrait-single",
+      "keywords": ["portrait", "face", "person", "man", "woman", "child"],
+      "mixed_checks": [
+        {
+          "keywords": ["animal", "pet", "dog", "cat"],
+          "result": { "primary": "mixed", "sub": "mixed-portrait-animal" }
+        },
+        {
+          "keywords": ["food", "eating", "meal", "dining"],
+          "result": { "primary": "mixed", "sub": "mixed-portrait-food" }
+        },
+        {
+          "keywords": ["landscape", "outdoor", "nature", "scenery"],
+          "result": { "primary": "mixed", "sub": "mixed-portrait-landscape" }
+        },
+        {
+          "keywords": ["building", "architecture", "structure"],
+          "result": { "primary": "mixed", "sub": "mixed-portrait-architecture" }
+        }
+      ],
+      "pose_checks": [
+        {
+          "keywords": ["close", "closeup", "headshot", "face"],
+          "result": { "primary": "portrait", "sub": "portrait-closeup" }
+        },
+        {
+          "keywords": ["full body", "standing", "full-length"],
+          "result": { "primary": "portrait", "sub": "portrait-full-body" }
+        },
+        {
+          "keywords": ["dynamic", "action", "jumping", "dancing"],
+          "result": { "primary": "portrait", "sub": "portrait-dynamic" }
+        }
+      ],
+      "default": { "primary": "portrait", "sub": "portrait-upper-body" }
+    },
+    
+    {
+      "priority": 3,
+      "type": "event",
+      "categories": [
+        {
+          "keywords": ["wedding", "ceremony"],
+          "result": { "primary": "event", "sub": "event-wedding" }
+        },
+        {
+          "keywords": ["party", "celebration", "birthday"],
+          "result": { "primary": "event", "sub": "event-party" }
+        },
+        {
+          "keywords": ["festival", "gathering"],
+          "result": { "primary": "event", "sub": "event-festival" }
+        },
+        {
+          "keywords": ["religious", "church", "temple"],
+          "result": { "primary": "event", "sub": "event-religious" }
+        }
+      ]
+    },
+    
+    {
+      "priority": 4,
+      "type": "nature",
+      "keywords": ["landscape", "nature", "outdoor", "scenery"],
+      "subcategories": [
+        {
+          "keywords": ["sea", "ocean", "beach", "water"],
+          "result": { "primary": "nature", "sub": "nature-sea" }
+        },
+        {
+          "keywords": ["mountain", "hill"],
+          "result": { "primary": "nature", "sub": "nature-mountain" }
+        },
+        {
+          "keywords": ["forest", "tree", "woods"],
+          "result": { "primary": "nature", "sub": "nature-forest" }
+        },
+        {
+          "keywords": ["field", "meadow", "grass"],
+          "result": { "primary": "nature", "sub": "nature-field" }
+        },
+        {
+          "keywords": ["sky", "cloud", "sunset"],
+          "result": { "primary": "nature", "sub": "nature-sky" }
+        }
+      ],
+      "default": { "primary": "nature", "sub": null }
+    },
+    
+    {
+      "priority": 5,
+      "type": "urban",
+      "keywords": ["building", "architecture", "structure", "interior"],
+      "subcategories": [
+        {
+          "keywords": ["interior", "room", "indoor"],
+          "result": { "primary": "urban", "sub": "urban-interior" }
+        },
+        {
+          "keywords": ["night", "evening"],
+          "result": { "primary": "urban", "sub": "urban-night" }
+        },
+        {
+          "keywords": ["street", "road"],
+          "result": { "primary": "urban", "sub": "urban-street" }
+        }
+      ],
+      "default": { "primary": "urban", "sub": "urban-architecture" }
+    },
+    
+    {
+      "priority": 6,
+      "type": "still-life",
+      "categories": [
+        {
+          "keywords": ["food", "meal", "dish"],
+          "result": { "primary": "still-life", "sub": "still-life-food" }
+        },
+        {
+          "keywords": ["drink", "beverage", "coffee", "wine"],
+          "result": { "primary": "still-life", "sub": "still-life-drink" }
+        },
+        {
+          "keywords": ["flower", "plant", "bouquet"],
+          "result": { "primary": "still-life", "sub": "still-life-flowers" }
+        },
+        {
+          "keywords": ["book", "reading"],
+          "result": { "primary": "still-life", "sub": "still-life-books" }
+        },
+        {
+          "keywords": ["product", "object"],
+          "result": { "primary": "still-life", "sub": "still-life-product" }
+        }
+      ]
+    },
+    
+    {
+      "priority": 7,
+      "type": "animal",
+      "categories": [
+        {
+          "keywords": ["animal", "pet", "dog", "cat"],
+          "result": { "primary": "animal", "sub": "animal-pet" }
+        },
+        {
+          "keywords": ["bird"],
+          "result": { "primary": "animal", "sub": "animal-bird" }
+        },
+        {
+          "keywords": ["wild", "wildlife"],
+          "result": { "primary": "animal", "sub": "animal-wild" }
+        }
+      ]
+    },
+    
+    {
+      "priority": 8,
+      "type": "daily-life",
+      "categories": [
+        {
+          "keywords": ["working", "studying", "office"],
+          "result": { "primary": "daily-life", "sub": "daily-life-work" }
+        },
+        {
+          "keywords": ["exercise", "sport", "running", "yoga"],
+          "result": { "primary": "daily-life", "sub": "daily-life-exercise" }
+        },
+        {
+          "keywords": ["cooking", "baking"],
+          "result": { "primary": "daily-life", "sub": "daily-life-cooking" }
+        },
+        {
+          "keywords": ["resting", "relaxing", "sleeping"],
+          "result": { "primary": "daily-life", "sub": "daily-life-rest" }
+        }
+      ]
+    }
+  ],
+  
+  "default": {
+    "primary": "portrait",
+    "sub": "portrait-upper-body"
+  }
+}

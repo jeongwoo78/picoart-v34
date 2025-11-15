@@ -1,0 +1,128 @@
+{
+  "name": "Renaissance",
+  "nameKo": "르네상스",
+  "period": "1400-1600",
+  "artworks": [
+    {
+      "id": "leonardo-mona",
+      "artist": "Leonardo da Vinci",
+      "artistKo": "레오나르도 다 빈치",
+      "work": "Mona Lisa",
+      "workKo": "모나리자",
+      "year": "1503-1519",
+      "categories": ["portrait", "mixed"],
+      "subcategories": ["portrait-closeup", "mixed-portrait-landscape"],
+      "prompt": "painting by Leonardo da Vinci, extreme sfumato technique with soft blurred edges and NO sharp outlines anywhere, smoky atmospheric haze with gentle gradual transitions between light and shadow, mysterious enigmatic expression, muted earth tones with subtle modeling, Leonardo da Vinci's scientific precision in anatomy, atmospheric distant landscape in background, portraying the SAME PERSON from the photo while capturing their distinctive facial features"
+    },
+    {
+      "id": "leonardo-supper",
+      "artist": "Leonardo da Vinci",
+      "artistKo": "레오나르도 다 빈치",
+      "work": "The Last Supper",
+      "workKo": "최후의 만찬",
+      "year": "1495-1498",
+      "categories": ["portrait", "event", "still-life"],
+      "subcategories": ["portrait-group-7plus", "event-religious", "mixed-portrait-food", "still-life-food"],
+      "prompt": "painting by Leonardo da Vinci, perfect linear perspective with vanishing point, dramatic moment captured in Renaissance style, symmetrical balanced composition, group portrait with expressive gestures, architectural interior setting, table with food and vessels, Leonardo da Vinci's scientific precision, portraying the SAME PERSON from the photo while capturing their distinctive facial features"
+    },
+    {
+      "id": "leonardo-ermine",
+      "artist": "Leonardo da Vinci",
+      "artistKo": "레오나르도 다 빈치",
+      "work": "Lady with an Ermine",
+      "workKo": "담비를 안은 여인",
+      "year": "1489-1491",
+      "categories": ["portrait", "animal", "mixed"],
+      "subcategories": ["portrait-upper-body", "animal-pet", "mixed-portrait-animal"],
+      "prompt": "painting by Leonardo da Vinci, elegant turning pose with graceful movement, detailed animal companion held tenderly, sfumato soft edges, Renaissance portrait with psychological depth, intimate bond between subject and animal, portraying the SAME PERSON from the photo while capturing their distinctive facial features"
+    },
+    {
+      "id": "michelangelo-adam",
+      "artist": "Michelangelo",
+      "artistKo": "미켈란젤로",
+      "work": "The Creation of Adam",
+      "workKo": "천지창조",
+      "year": "1508-1512",
+      "categories": ["portrait", "event"],
+      "subcategories": ["portrait-small-group", "event-religious", "daily-life-exercise"],
+      "prompt": "painting by Michelangelo, sculptural muscular forms with anatomical perfection, heroic proportions and monumental scale, dynamic reaching pose full of energy, Renaissance fresco masterpiece, powerful divine moment, athletic physique rendered with Renaissance mastery, portraying the SAME PERSON from the photo while capturing their distinctive facial features"
+    },
+    {
+      "id": "michelangelo-judgment",
+      "artist": "Michelangelo",
+      "artistKo": "미켈란젤로",
+      "work": "The Last Judgment",
+      "workKo": "최후의 심판",
+      "year": "1536-1541",
+      "categories": ["portrait", "event"],
+      "subcategories": ["portrait-group-7plus", "event-religious"],
+      "prompt": "painting by Michelangelo, dramatic turbulent composition with numerous figures, muscular athletic bodies in violent motion, intense emotional expressions of fear and awe, Renaissance fresco of epic scale, powerful divine judgment scene, swirling dynamic arrangement, portraying the SAME PERSON from the photo while capturing their distinctive facial features"
+    },
+    {
+      "id": "raphael-athens",
+      "artist": "Raphael",
+      "artistKo": "라파엘로",
+      "work": "The School of Athens",
+      "workKo": "아테네 학당",
+      "year": "1509-1511",
+      "categories": ["portrait", "urban", "event"],
+      "subcategories": ["portrait-group-7plus", "urban-architecture", "event", "mixed-portrait-architecture", "daily-life-work"],
+      "prompt": "painting by Raphael, perfectly harmonious balanced composition, classical architecture with grand arches and columns, serene philosophical atmosphere, Renaissance fresco masterpiece, group of scholars in thoughtful discussion, ideal proportions and symmetry, portraying the SAME PERSON from the photo while capturing their distinctive facial features"
+    },
+    {
+      "id": "raphael-madonna",
+      "artist": "Raphael",
+      "artistKo": "라파엘로",
+      "work": "Madonna della Seggiola",
+      "workKo": "의자의 성모",
+      "year": "1513-1514",
+      "categories": ["portrait"],
+      "subcategories": ["portrait-small-group"],
+      "prompt": "painting by Raphael, circular tondo composition, intimate maternal warmth and tenderness, gentle loving expressions, Renaissance portrait masterpiece, soft harmonious colors, perfect balance of mother and children, portraying the SAME PERSON from the photo while capturing their distinctive facial features"
+    },
+    {
+      "id": "botticelli-venus",
+      "artist": "Sandro Botticelli",
+      "artistKo": "산드로 보티첼리",
+      "work": "The Birth of Venus",
+      "workKo": "비너스의 탄생",
+      "year": "1484-1486",
+      "categories": ["portrait", "nature", "mixed"],
+      "subcategories": ["portrait-full-body", "nature-sea", "mixed-portrait-landscape"],
+      "prompt": "painting by Sandro Botticelli, flowing graceful lines and elegant contours, poetic dreamlike atmosphere, Renaissance tempera masterpiece, gentle rhythmic movement, delicate beauty emerging from sea, soft pastel colors and golden highlights, portraying the SAME PERSON from the photo while capturing their distinctive facial features"
+    },
+    {
+      "id": "botticelli-primavera",
+      "artist": "Sandro Botticelli",
+      "artistKo": "산드로 보티첼리",
+      "work": "Primavera",
+      "workKo": "프리마베라",
+      "year": "1477-1482",
+      "categories": ["portrait", "nature", "event"],
+      "subcategories": ["portrait-group-4-6", "nature-forest", "event-festival", "still-life-flowers"],
+      "prompt": "painting by Sandro Botticelli, enchanted spring garden with abundant flowers, dancing graceful figures in rhythmic composition, Renaissance tempera masterpiece, over 500 species of botanical details, poetic allegorical scene, flowing delicate brushwork, portraying the SAME PERSON from the photo while capturing their distinctive facial features"
+    },
+    {
+      "id": "titian-venus",
+      "artist": "Titian",
+      "artistKo": "티치아노",
+      "work": "Venus of Urbino",
+      "workKo": "우르비노의 비너스",
+      "year": "1538",
+      "categories": ["portrait", "urban"],
+      "subcategories": ["portrait-full-body", "urban-interior", "daily-life-rest"],
+      "prompt": "painting by Titian, rich Venetian colors with warm golden tones, luxurious opulent interior setting, Renaissance oil painting masterpiece, sensual beauty in repose, sumptuous fabrics and textures, masterful use of light and shadow, portraying the SAME PERSON from the photo while capturing their distinctive facial features"
+    },
+    {
+      "id": "titian-glove",
+      "artist": "Titian",
+      "artistKo": "티치아노",
+      "work": "Man with a Glove",
+      "workKo": "장갑을 낀 남자",
+      "year": "1520-1523",
+      "categories": ["portrait"],
+      "subcategories": ["portrait-closeup"],
+      "prompt": "painting by Titian, psychological depth and inner contemplation, Venetian color palette with rich tones, aristocratic dignified presence, Renaissance portrait masterpiece, subtle modeling of facial features, elegant refined atmosphere, portraying the SAME PERSON from the photo while capturing their distinctive facial features"
+    }
+  ]
+}
